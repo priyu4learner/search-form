@@ -37,10 +37,9 @@
         box-shadow: gray 5px 5px;
     }
     .forum{
-        margin: 32px 32px;
         padding: 23px 23px;
         background-color: yellow;
-        width:60vh;
+        
         
     }
     .in{
@@ -50,6 +49,25 @@
     .input:hover{
         background-color: blanchedalmond;
     }
+    .con{
+        display: flex;
+        flex-flow: row;
+        text-align: center;
+        justify-content: center;
+    }
+    #content{
+        border: black solid 5px;
+        background-color: blanchedalmond;
+        
+        padding: 50px 50px;
+        font-size: 2rem;
+    }
+    @media screen and (max-width:650px) {
+     .con{
+         flex-flow: column;
+     } 
+    }
+    
 </style>
 
 <body>
@@ -159,18 +177,17 @@
         </div>
     </section>
     <!---------------------------content--------------------------->
-    <div class="container forum">
+    <div class="container-fluid d-flex con">
+    <div class="forum">
         <h1>Search</h1>
+        <hr>
+        <h2>Accomodation Details</h2>
         <hr>
         <form action="" id="form">
             <div class="in"> <label for="dest_name">Destination Name</label></div>
             <div class="in"><input type="text" placeholder=" Search..." id="dest_name"></div>
             <div class="in"> <label for="source_name">Source Name</label></div>
             <div class="in"><input type="text" placeholder=" Search..." id="source_name"></div>
-            <div class="in"><label for="check_in">Check-In Date</label></div>
-            <div class="in"><input type="date" id="dest_name"></div>
-            <div class="in"><label for="check_out">Check-Out Date</label></div>
-            <div class="in"><input type="date" id="dest_name"></div>
             <div class="in"><label for="no_room">Number of Room/s</label>
                 <select name="" id="">
                     <option value="">Number of room</option>
@@ -190,18 +207,27 @@
                     <option value="">4</option>
                 </select>
             </div>
-            
             <div class="form-check in">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                   Show on Map
                 </label>
               </div>
-             <div><input type="submit" id="" placeholder=""> <input type="submit"></div>
-
-
+             <div><input type="submit" id="" placeholder=""> </div>
+        </form>
+        <hr>
+        <h2>Flight Details</h2>
+        <hr>
+        <form action="">
+            <div class="in"><label for="check_in">Check-In Date</label></div>
+            <div class="in"><input type="date" id="dest_name"></div>
+            <div class="in"><label for="check_out">Check-Out Date</label></div>
+            <div class="in"><input type="date" id="dest_name"></div>
+            <div><input type="submit"></div>
         </form>
         </div>
+        <div id="content">YOUR RESULTS WILL BE VISIBLE HERE........................</div>
+    </div>
         <!---------------------------upper footer--------------------------->
         <footer class="text-muted py-5 my-3">
             <div class="container">
